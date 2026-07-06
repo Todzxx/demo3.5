@@ -1,0 +1,21 @@
+{
+  "name": "project-kd35",
+  "version": "1.0.0",
+  "description": "Express.js Todo API untuk presentasi KD 3.5",
+  "main": "server.js",
+  "scripts": {
+"dev": "nodemon server.js",
+"start": "node server.js",
+"seed": "node seed.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.38.3",
+    "express": "^4.21.2",
+    "mysql2": "^3.12.0"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.30.4",
+    "nodemon": "^3.1.9"
+  }
+}
