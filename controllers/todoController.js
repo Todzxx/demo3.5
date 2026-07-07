@@ -27,10 +27,12 @@ const createTodo = async (req, res) => {
   }
 };
 
-const updateTodoStatus = async (req, res) => {
+const updateTodo = async (req, res) => {
   try {
     const id = Number(req.params.id);
-    const result = await todoModel.updateStatus(id);
+    const { title, completed } = req.body;
+
+    const result = await todoModel.update(id, { title, completed });
 
     if (!result) {
       return res.status(404).json({
@@ -39,7 +41,7 @@ const updateTodoStatus = async (req, res) => {
       });
     }
 
-    res.json({ success: true, message: "Status berhasil diubah", data: result });
+    res.json({ success: true, message: "Todo berhasil diupdate", data: result });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
   }
@@ -63,4 +65,4 @@ const deleteTodo = async (req, res) => {
   }
 };
 
-module.exports = { getTodos, createTodo, updateTodoStatus, deleteTodo };
+module.exports = { getTodos, createTodo, updateTodo, deleteTodo };
