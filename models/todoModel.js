@@ -1,5 +1,5 @@
 const { eq } = require("drizzle-orm");
-const { db } = require("../db");
+const { db } = require("../config/db");
 const { todos } = require("../schema/todos");
 
 const getAll = async () => {

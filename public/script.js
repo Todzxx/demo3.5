@@ -107,7 +107,6 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const title = input.value.trim();
-  if (!title) return;
 
   const res = await fetch(API_URL, {
     method: "POST",
