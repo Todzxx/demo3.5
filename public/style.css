@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.container {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.75rem 1.25rem;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+#todoList {
+  list-style: none;
+}
+
+#todoList li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+
+#todoList li:last-child {
+  border-bottom: none;
+}
+
+#todoList li span {
+  flex: 1;
+}
+
+#todoList li span.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+#todoList li .edit-input {
+  flex: 1;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.95rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.actions button {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+button.edit {
+  background: #2196F3;
+}
+
+button.edit:hover {
+  background: #1976D2;
+}
+
+button.save {
+  background: #4CAF50;
+}
+
+button.cancel {
+  background: #9E9E9E;
+}
+
+button.cancel:hover {
+  background: #757575;
+}
+
+button.delete {
+  background: #f44336;
+}
+
+button.delete:hover {
+  background: #d32f2f;
+}
+
+.error-message {
+  color: #f44336;
+  text-align: center;
+  margin-bottom: 1rem;
+}
